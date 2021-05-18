@@ -1,0 +1,22 @@
+[package]
+name = "casper-multisig-tool"
+version = "0.1.0"
+authors = ["Fraser Hutchison <fraser@casperlabs.io>"]
+edition = "2018"
+
+[lib]
+name = "casper_multisig_tool"
+path = "src/lib.rs"
+
+[[bin]]
+name = "casper-multisig-tool"
+path = "src/main.rs"
+doc = false
+
+[dependencies]
+casper-node = "1"
+casper-types = "1"
+dirs = "3"
+fltk = {version = "1", features = ["fltk-bundled", "system-libpng"] }
+once_cell = "1"
+thiserror = "1"
